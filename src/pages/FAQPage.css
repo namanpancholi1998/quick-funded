@@ -1,0 +1,98 @@
+/* PastelKeyboard.css */
+body {
+  background-color: black;
+  color: #ffffff;
+}
+.pastel-keyboard {
+  background: linear-gradient(145deg, #f0f0f0, #ffffff);
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.pastel-key {
+  transition: all 0.1s ease;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  color: #6a5acd;
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+  box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.8),
+    5px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.pastel-key:hover {
+  transform: translateY(-2px);
+  box-shadow: -2px -2px 5px rgba(255, 255, 255, 0.8),
+    2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.pastel-key:active {
+  transform: translateY(2px);
+  box-shadow: inset -2px -2px 5px rgba(255, 255, 255, 0.8),
+    inset 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes keyPress {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.pastel-key-pressed {
+  animation: keyPress 0.1s ease;
+}
+
+.pastel-social-icon {
+  transition: all 0.3s ease;
+}
+
+.pastel-social-icon:hover {
+  transform: scale(1.1);
+}
+
+.pastel-pressed-key-display {
+  background: linear-gradient(145deg, #f0f0f0, #ffffff);
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #6a5acd;
+  text-align: center;
+  box-shadow: inset -5px -5px 10px rgba(255, 255, 255, 0.8),
+    inset 5px 5px 10px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.pastel-keyboard-row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .pastel-keyboard {
+    padding: 10px;
+  }
+
+  .pastel-key {
+    font-size: 12px;
+  }
+}
